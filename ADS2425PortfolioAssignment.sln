@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33927.249
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADSPortEx1", "ADSPortEx1\ADSPortEx1.csproj", "{A3BE559B-5946-4482-9568-F89141C00823}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3BE559B-5946-4482-9568-F89141C00823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3BE559B-5946-4482-9568-F89141C00823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3BE559B-5946-4482-9568-F89141C00823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3BE559B-5946-4482-9568-F89141C00823}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B26D66E6-9C68-4E82-8E43-F0F286DEA250}
+	EndGlobalSection
+EndGlobal
