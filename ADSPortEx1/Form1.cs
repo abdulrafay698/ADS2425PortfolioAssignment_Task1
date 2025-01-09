@@ -32,7 +32,15 @@ namespace ADSPortEx1
         // Dequeue Guest 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (guestQueue.IsEmpty())
+            {
+                MessageBox.Show("Queue is Empty.");
+            }
+            else
+            {
+                guestQueue.Dequeue();
+                MessageBox.Show("Guest deleted successfully.");
+            }
         }
 
         
@@ -40,6 +48,8 @@ namespace ADSPortEx1
         private void button4_Click(object sender, EventArgs e)
         {
 
+            //Reverse_k_Form f3 = new Reverse_k_Form(ref guestQueue);
+            //f3.Show();
         }
 
 
@@ -81,17 +91,25 @@ namespace ADSPortEx1
         }
 
 
-        // IS full () 
+        // show is Full 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            if (guestQueue.IsFull())
+                MessageBox.Show("Queue is Full");
+            else
+                MessageBox.Show("Queue is not Full");
         }
 
-        // is empty () 
+        // show is Empty 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            if (guestQueue.IsEmpty())
+                MessageBox.Show("Queue is Empty");
+            else
+                MessageBox.Show("Queue is not Empty");
         }
+
+    
 
         // display guest with most funds 
         private void button9_Click(object sender, EventArgs e)
