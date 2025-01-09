@@ -22,7 +22,7 @@ namespace ADSPortEx1
 
     // - Adam.M 
 
-    class GuestQueue
+    public class GuestQueue
     {
 
         // Functions for EX.1A
@@ -30,7 +30,7 @@ namespace ADSPortEx1
         private int maxsize = 10;
         private Guest[] store;
         private int head = 0;
-        private int tail = 0;
+        private int tail = -1;
         private int numItems = 0; // current number of items 
 
         public GuestQueue()
