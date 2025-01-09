@@ -93,12 +93,46 @@ namespace ADSPortEx1
 
         public void Reverse(int k)
         {
-            throw new NotImplementedException();
+            if (k <= 0 || k > numItems)
+            {
+                Console.WriteLine("Invalid value for k.");
+                return;
+            }
+
+            int[] indices = new int[k];
+            for (int i = 0; i < k; i++)
+            {
+                indices[i] = (head + i) % maxsize;
+            }
+
+            for (int i = 0; i < k / 2; i++)
+            {
+                var temp = store[indices[i]];
+                store[indices[i]] = store[indices[k - i - 1]];
+                store[indices[k - i - 1]] = temp;
+            }
+
         }
 
         public Guest GetMostFunds()
         {
-            throw new NotImplementedException();
+            if (IsEmpty())
+            {
+                Console.WriteLine("Queue is empty!");
+                return null;
+            }
+
+            Guest maxGuest = store[head];
+            for (int i = 1; i < numItems; i++)
+            {
+                int index = (head + i) % maxsize;
+                if (store[index].Funds > maxGuest.Funds)
+                {
+                    maxGuest = store[index];
+                }
+            }
+
+            return maxGuest;
         }
 
         // See tasksheet for details for EX.1C
