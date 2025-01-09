@@ -15,29 +15,34 @@ namespace ADSPortEx1
     //See material from 'C# Classes' in week 2 to 
     // aid with implementation...
 
-    class Guest : IComparable
+    public class Guest : IComparable
     {
+
+        private string name;
+        private double funds; 
 
         public Guest(string name, double funds)
         {
-            throw new NotImplementedException();
+            this.name = name;  
+            this.funds = funds; 
         }
 
         public string Name
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get {  return name ; }
+            set { name = value ; }
         }
 
         public double Funds
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return funds; }
+            set { funds = value; }
         }
 
         public int CompareTo(object obj)
         {
-            throw new NotImplementedException();
+            Guest other = (Guest)obj;
+            return name.CompareTo(other.name);
         }
 
 
