@@ -26,45 +26,68 @@ namespace ADSPortEx1
     {
 
         // Functions for EX.1A
+
+        private int maxsize = 10;
+        private Guest[] store;
+        private int head = 0;
+        private int tail = 0;
+        private int numItems = 0; // current number of items 
+
         public GuestQueue()
         {
-            throw new NotImplementedException();
+            store = new Guest[maxsize];
         }
 
         public GuestQueue(int size)
         {
-            throw new NotImplementedException();
+            this.maxsize = size;
+            store = new Guest[maxsize];
         }
 
         public void Enqueue(Guest value)
         {
-            throw new NotImplementedException();
+
+            store[tail] = value;
+            tail++;
+            numItems++;
+
+
+
         }
 
         public Guest Dequeue()
         {
-            throw new NotImplementedException();
+            Guest temp = store[head];
+            head++;
+            numItems--;
+            return temp;
+
+
         }
 
         public Guest Peek()
         {
-            throw new NotImplementedException();
+
+            return store[head];
         }
 
         public int Count()
         {
-            throw new NotImplementedException();
+
+            return numItems;
         }
 
         public bool IsEmpty()
         {
-            throw new NotImplementedException();
+
+            return numItems == 0;
         }
 
         public bool IsFull()
         {
-            throw new NotImplementedException();
+            return numItems == maxsize;
         }
+
 
         // Functions for EX.1B
 
