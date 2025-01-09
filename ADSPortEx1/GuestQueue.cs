@@ -44,26 +44,26 @@ namespace ADSPortEx1
             store = new Guest[maxsize];
         }
 
-        public void Enqueue(Guest value)
-        {
+        //public void Enqueue(Guest value)
+        //{
 
-            store[tail] = value;
-            tail++;
-            numItems++;
-
-
-
-        }
-
-        public Guest Dequeue()
-        {
-            Guest temp = store[head];
-            head++;
-            numItems--;
-            return temp;
+        //    store[tail] = value;
+        //    tail++;
+        //    numItems++;
 
 
-        }
+
+        //}
+
+        //public Guest Dequeue()
+        //{
+        //    Guest temp = store[head];
+        //    head++;
+        //    numItems--;
+        //    return temp;
+
+
+        //}
 
         public Guest Peek()
         {
@@ -140,11 +140,50 @@ namespace ADSPortEx1
         // See tasksheet for details for EX.1C
 
 
+        public void Enqueue(Guest value)
+        {
+
+
+            if (IsFull())
+            {
+                Console.WriteLine("Queue full, Cannot add more guests.");
+                return;
+            }
+            tail = (tail + 1) % maxsize;
+            store[tail] = value;
+            numItems++;
+        }
+
+        public Guest Dequeue()
+        {
+            
+
+            if (IsEmpty())
+            {
+                Console.WriteLine("Queue empty, No guests to remove.");
+                return null;
+            }
+
+            Guest temp = store[head];
+            head = (head + 1) % maxsize;
+            numItems--;
+            return temp;
+        }
+
 
         //Free space, use as necessary to address task requirements... 
 
 
-
+        public List<Guest> GetAllGuests()
+        {
+            List<Guest> guests = new List<Guest>();
+            for (int i = 0; i < numItems; i++) // 'size' keeps track of the current number of elements
+            {
+                int index = (head + i) % maxsize; // Circular queue logic to calculate the correct index
+                guests.Add(store[index]);
+            }
+            return guests;
+        }
 
 
 
