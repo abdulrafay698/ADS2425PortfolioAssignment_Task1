@@ -80,6 +80,12 @@
     <Compile Include="GuestQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reverse_k_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reverse_k_Form.Designer.cs">
+      <DependentUpon>Reverse_k_Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EnqueueForm.resx">
       <DependentUpon>EnqueueForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reverse_k_Form.resx">
+      <DependentUpon>Reverse_k_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

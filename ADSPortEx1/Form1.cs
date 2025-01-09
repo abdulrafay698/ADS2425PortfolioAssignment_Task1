@@ -44,12 +44,12 @@ namespace ADSPortEx1
         }
 
         
-        // revevr e k times 
+        // revevre k times 
         private void button4_Click(object sender, EventArgs e)
         {
 
-            //Reverse_k_Form f3 = new Reverse_k_Form(ref guestQueue);
-            //f3.Show();
+            Reverse_k_Form f3 = new Reverse_k_Form(ref guestQueue);
+            f3.Show();
         }
 
 
